@@ -1,0 +1,147 @@
+
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:" --data @getDemographicSoapRequest.txt https://signup1.oscarhost.ca/snapmd/ws/DemographicService
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:" --data @getDemographicSoapRequestClickmd.txt https://secure20.oscarhost.ca/clickmd/ws/DemographicService
+
+
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:" --data @addDemographicSoapRequestClickmd.txt https://secure20.oscarhost.ca/clickmd/ws/DemographicService
+
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:" --data @addDemographicSoapRequest.txt https://signup1.oscarhost.ca/snapmd/ws/DemographicService
+
+
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:" --data @getProviderSoapRequest.txt https://signup1.oscarhost.ca/snapmd/ws/ProviderService
+
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:" --data @addAppointment.txt https://signup1.oscarhost.ca/snapmd/ws/ScheduleService
+
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:" --data @getAppointment.txt https://signup1.oscarhost.ca/snapmd/ws/ScheduleService
+
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:" --data @addAppointmentClickMD.txt https://secure20.oscarhost.ca/clickmd/ws/ScheduleService
+
+
+
+https://signup1.oscarhost.ca/snapmd/ws/DemographicService
+addDemographic
+getDemographic
+updateDemographic
+
+https://signup1.oscarhost.ca/snapmd/ws/LoginService
+login
+
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:" --data @loginSoapRequestClickmd.txt https://secure20.oscarhost.ca/clickmd/ws/LoginService
+
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:" --data @loginSoapRequest.txt https://signup1.oscarhost.ca/snapmd/ws/LoginService
+
+https://signup1.oscarhost.ca/snapmd/ws/ProviderService
+For the Doctors?
+getProviders
+
+
+https://signup1.oscarhost.ca/snapmd/ws/ScheduleService
+getAppointmentsForPatient
+getAppointmentTypes
+addAppointment
+getScheduleTemplateCodes
+getAppointment
+getAppointmentsForProvider
+updateAppointment
+
+
+
+
+insert into demographic
+(title, first_name, last_name, sex, month_of_birth, date_of_birth, year_of_birth, address, city, province, postal, email,
+phone, phone2, myOscarUserName, hin, ver, hc_type, hc_renew_date, roster_status, patient_status,
+patient_status_date, date_joined, chart_no, provider_no, end_date, eff_date, roster_date, roster_termination_date,
+roster_termination_reason, pcn_indicator, family_doctor, family_doctor_2, alias, previousAddress, children,
+sourceOfIncome, citizenship, sin, anonymous, spoken_lang, official_lang, lastUpdateUser, lastUpdateDate, newsletter,
+country_of_origin, scanned_chart, name_of_father, name_of_mother) values
+(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+
+
+curl --header "Content-Type: text/xml;charset=UTF-8" --header "SOAPAction:" --data @addDemographicSoapRequest2.txt https://signup1.oscarhost.ca/snapmd/ws/DemographicService
+
+
+
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+
+<soap:Body>
+<ns2:getAppointmentResponse xmlns:ns2="http://ws.oscarehr.org/">
+<return>
+<appointmentEndDateTime>
+2016-10-12T09:30:00-07:00</appointmentEndDateTime>
+<appointmentStartDateTime>
+2016-10-12T09:30:00-07:00</appointmentStartDateTime>
+<createDateTime>
+2016-10-12T08:47:55-07:00</createDateTime>
+<creator>
+Wang, Yang</creator>
+<demographicNo>
+0</demographicNo>
+<id>
+5</id>
+<lastUpdateUser>
+999998</lastUpdateUser>
+<location>
+</location>
+<name>
+</name>
+<notes>
+</notes>
+<programId>
+0</programId>
+<providerNo>
+999998</providerNo>
+<reason>
+</reason>
+<remarks>
+</remarks>
+<resources>
+</resources>
+<status>
+t</status>
+<type>
+</type>
+<updateDateTime>
+2016-10-12T08:50:30-07:00</updateDateTime>
+<urgency>
+</urgency>
+</return>
+</ns2:getAppointmentResponse>
+</soap:Body>
+</soap:Envelope>
+[
+
+
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Body>
+<ns2:getAppointmentResponse xmlns:ns2="http://ws.oscarehr.org/">
+<return>
+<appointmentEndDateTime>
+2016-10-12T08:44:59-07:00</appointmentEndDateTime>
+<appointmentStartDateTime>
+2016-10-12T08:45:00-07:00</appointmentStartDateTime>
+<createDateTime>
+2016-10-12T08:59:17-07:00</createDateTime>
+<creator>
+ywang</creator>
+<demographicNo>
+24</demographicNo>
+<id>
+8</id>
+<name>
+Brooks, David</name>
+<notes>
+these4 are our notes</notes>
+<programId>
+0</programId>
+<providerNo>
+999998</providerNo>
+<status>
+t</status>
+<updateDateTime>
+2016-10-12T08:59:17-07:00</updateDateTime>
+</return>
+</ns2:getAppointmentResponse>
+</soap:Body>
+</soap:Envelope>

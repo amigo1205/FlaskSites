@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/authorization.js') }}" ></script>
+{% endblock scripts %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+                <h1 class="page-title new-case-form-title">Authorization</h1>
+                <table class="table table-responsive table-striped table-bordered authorization-table">
+                    <tr>
+                       <th>First Name</th>
+                       <th>Last Name</th>
+                        <th>Organization</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Date Created</th>
+                        <th>Authorize</th>
+                    </tr>
+                    <tr dataesp-repeat="c in coordinators"   >
+                        <td><% c.firstName %></td>
+                        <td><% c.lastName %></td>
+                        <td><% c.organization %></td>
+                        <td><% c.email %></td>
+                        <td><% c.phone %></td>
+                        <td><% c.dateCreated %></td>
+                        <td><button type="button" onclick="authorizeCoordinator(  '<% c.coordinatorId %>' )">Authorize</button> </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

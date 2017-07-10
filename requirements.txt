@@ -1,0 +1,6 @@
+suds-jurko
+pymysql
+flask-mail
+flask
+pip insta
+pycurl

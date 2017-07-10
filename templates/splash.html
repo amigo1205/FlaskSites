@@ -1,0 +1,212 @@
+{% extends "base.html" %}
+{% block scripts %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/splash.js') }}?ver=1.0"></script>
+{% endblock %}
+{% block content %}
+    <div id="content">
+        <div id="splash-page">
+            <div class="splash-intro"></div>
+
+            <div class="splash-btn-group">
+
+                    <a class="btn btn-success intro-btn intro-btn-1" href="#start">
+                        <span style="font-size: 1.3em;">Get Started!</span>
+                    </a>
+
+                    <a class="btn btn-default intro-btn intro-btn-2" href="/login" style="padding-left: 1.5em; padding-right: 1.5em;">
+                        <span style="font-size: 1.3em;">Health Care Provider Login</span>
+                    </a>
+
+            </div>
+
+            <!--<div class="btn-group">
+                <a class="btn btn-default" href="/login" aria-expanded="false">
+                    <span class="glyphicon glyphicon-cog"></span>&nbsp;Advanced
+                </a>
+                <a class="btn btn-default" href="/login" aria-expanded="false">
+                    <span class="glyphicon glyphicon-cog"></span>&nbsp;Advanced
+                </a>
+            </div>-->
+
+
+            <div class="splash-panel" style="background-color: #f7f8f3; color: #111;">
+                <div class="container custom-panel">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1" style="text-align:center">
+                            <h3><span class="cmd-click" >click</span><span class="cmd-md">MD</span>™ is Open at these Locations Today</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="providers-notmodal-info" class="col-xs-12 text-center">
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+
+            <div class="splash-panel" style="background-color: #ecf9ff;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-10 text-center border-bottom top-25" style="border-bottom-color: #7aacc5;">
+                            <h2 style="color: #208fe5;">We are your quick and convenient access to a licensed doctor.</h2>
+                        </div>
+                        <div class="col-md-offset-2 col-md-8 text-justify">
+                            <p>We can assess, diagnose and treat many common medical problems without you having to visit a busy walk-in clinic or emergency department.</p>
+                            <p>Avoid having to travel or be exposed to other people’s illnesses. Your prescription can even be sent to your regular pharmacist who may even deliver to your front door.</p>
+                            <p class="bold">Quick and convenient from start to finish!</p>
+                        </div>
+                        <!-- <div class="col-sm-offset-1 col-sm-10 top-25">
+                            <iframe type="text/html" width="100%" height="400" src="https://www.youtube.com/embed/gnmpUXM3-Rs" allowfullscreen></iframe>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="splash-panel" style="background-color: #002c37; color: #aaa;">
+                <div class="container">
+                    {#<div class="row">
+                        <div class="col-md-offset-3 col-md-6 text-center border-bottom" style="border-bottom-color: #1a526e;">
+                            <h1 style="color: #1a78c1;">How It Works</h1>
+                        </div>
+                        <div class="col-xs-12 text-center">
+                            <h3>(Graph Goes Here)</h3>
+                        </div>
+                    </div>#}
+                </div>
+            </div>
+
+            <div class="splash-panel" style="background-color: #f7f8f3; color: #111;">
+                <div id="start" class="container custom-panel">
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <h3>What we <span class="text-success bold">can</span> do:</h3>
+                            <ul class="fa-ul top-25">
+                                <li><i class="fa-li fa fa-check text-success"></i>
+                                    <span class="cmd-click">click</span><span class="cmd-md">MD</span>™ can allow you to connect with a <strong>fully licensed doctor</strong> in a timely and convenient manner.
+                                </li>
+                                <li><i class="fa-li fa fa-check text-success"></i>
+                                    Your doctor will be able to <strong>assess</strong> and <strong>diagnose</strong> many common medical problems without you having to visit a busy walk-in clinic or emergency department.
+                                </li>
+                                <li><i class="fa-li fa fa-check text-success"></i>
+                                    If you are <strong>prescribed</strong> medication by one of our doctors, we can even forward it to your pharmacist for your convenience.
+                                </li>
+                                <li><i class="fa-li fa fa-check text-success"></i>
+                                    We can provide services to residents of Ontario, who are in Ontario at the time of assessment with <strong>valid</strong> OHIP coverage.
+                                </li>
+                                <li><i class="fa-li fa fa-check text-success"></i>
+                                    Unlike going to regular walk-in clinics, your family doctor will <strong>not</strong> be penalized if you use <span class="cmd-click">click</span><span class="cmd-md">MD</span>™ through our on-demand service platforms.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-5">
+                            <h3>What we <span class="text-danger bold">cannot</span> do:</h3>
+                            <ul class="fa-ul top-25">
+                                <li><i class="fa-li fa fa-times text-danger"></i>
+                                    We cannot see patients who are outside of Ontario at the time of assessment.
+                                </li>
+                                <li><i class="fa-li fa fa-times text-danger"></i>
+                                    Although patients require OHIP coverage to use <span class="cmd-click">click</span><span class="cmd-md">MD</span>™ on the internet or through our mobile applications, we cannot bill OHIP for our services for our on-demand services.
+                                </li>
+                                <li><i class="fa-li fa fa-times text-danger"></i>
+                                    We are unable to provide insurance or disability application forms, and we won't be able to refer you to other health care providers.
+                                </li>
+                                <li><i class="fa-li fa fa-times text-danger"></i>
+                                    Our doctors cannot prescribe narcotics, benzodiazepines or other restricted substances. They will also not be able to provide diagnoses for certain complex medical conditions.
+                                </li>
+                                <li><i class="fa-li fa fa-times text-danger"></i>
+                                    Blood tests, urine tests, x-rays and any other radiologic investigations cannot be done using this service.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 top-25 text-danger text-center">
+                            <strong>Remember</strong>: if you need urgent medical care, please go to your nearest emergency department or call 9-1-1!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="splash-panel text-center" style="background-color: #2090e6; padding: 2em;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-offset-4 col-md-4">
+                            <h1 class="border-bottom" style="color: #dcf0ff; margin: 0; border-bottom-color: #25b6ff;">All set?</h1>
+                            <button type="button" id="modal-trigger" class="btn btn-success top-25" data-toggle="modal" data-target="#provider-locator" disabled>
+                                <span style="font-size: 1.6em; font-weight: bold; padding-left: 1em; padding-right: 1em;">Let's See a Doctor!</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="splash-panel" style="background-color: #f7f8f3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-11">
+                            <h2 class="col-xs-12 col-lg-3 col-md-4 text-center" style="font-weight: bold; color: #1a78c1;">Who Are We?</h2>
+
+                            <div style="padding-top: 75px;">
+                                <div class="col-md-push-7 col-md-3 col-xs-12">
+                                    <div class="logo-fill"></div>
+                                </div>
+                                <div class="col-md-pull-3 col-md-6 col-xs-12" style="margin-top: 15px;">
+                                    <ul>
+                                        <li><span class="cmd-click">click</span><span class="cmd-md">MD</span>™ is an online video conferencing service that connects patients with doctors in a timely and convenient manner.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12" style="background: url('../static/images/logo-affiliates.png') no-repeat center / contain; height: 200px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="splash-panel" style="background-color: #002c37; color: #bbb; padding: 1.5em; font-size: 0.8em;">
+                <div class="container-fluid">
+                    <div class="row">
+                        <p class="col-md-6 col-md-offset-1">
+                            <span class="cmd-click">click</span><span class="cmd-md">MD</span>™ uses a secure video conferencing platform that is PHIPA (Personal Health Information Protection Act) compliant.
+                            All medical information is stored in an approved and secure electronic medical record system only.
+                            No personal information will be shared. Medical information will only be accessed as part of the provision of medical services to patients and/or their legal guardians.
+                        </p>
+                        <div class="col-md-3 text-center" style="margin-top: 15px;">
+                            Copyright © 2016 clickMD. All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="provider-locator" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <!--<h4 class="modal-title text-center" id="myModalLabel">Locate a clickMD™ Provider</h4>-->
+                    <h4 class="modal-title text-center" id="myModalLabel"><span class="cmd-click">click</span><span class="cmd-md">MD</span>™ is Open at these Locations Today</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div id="providers-modal-info" class="col-xs-12 text-center">
+                            <!-- Google Maps Javascript API key: AIzaSyBKUxZrYppaWFL1RO-XxLZ__us9MTZLwC4 -->
+                            <!-- Google Maps Geocoding API key: AIzaSyBcTnMvuhar4jj3LMw2KBgtqJh7m__22Ro -->
+                        </div>
+                        <div class="alert alert-danger message-field" id="modal-error" style="display:none"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+                        <div class="col-xs-offset-5 col-xs-2">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

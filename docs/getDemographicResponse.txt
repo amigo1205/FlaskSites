@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <ns2:getDemographicResponse xmlns:ns2="http://ws.oscarehr.org/">
+         <return>
+            <activeCount>1</activeCount>
+            <address>address    1234567892123456789312345678941234567895123456789</address>
+            <chartNo />
+            <city>city       123456789</city>
+            <dateOfBirth>05</dateOfBirth>
+            <demographicNo>86</demographicNo>
+            <displayName>last name 11234567892123456789, first name 1234567892123456789</displayName>
+            <effDate>2016-10-01T00:00:00-07:00</effDate>
+            <email>dbrooks601@rogers.com</email>
+            <endDate>2016-10-01T00:00:00-07:00</endDate>
+            <familyDoctor>dr</familyDoctor>
+           <firstName>first name 1234567892123456789</firstName>
+            <hcRenewDate>2016-10-01T00:00:00-07:00</hcRenewDate>
+            <hcType>a</hcType>
+            <hin>9781468292</hin>
+            <hsAlertCount>0</hsAlertCount>
+            <lastName>last name 11234567892123456789</lastName>
+            <links />
+            <monthOfBirth>05</monthOfBirth>
+            <officialLanguage>official language 892123456789312345678941234567895123456789</officialLanguage>
+            <patientStatus>a</patientStatus>
+            <patientStatusDate>2016-10-01T00:00:00-07:00</patientStatusDate>
+            <pcnIndicator>a</pcnIndicator>
+            <phone>phone 67890123456789</phone>
+            <phone2>01234567889012345678</phone2>
+            <postal>N1G 1H9</postal>
+            <previousAddress>previous address  8921234567893123456789412345678951234567896123456789712345678981234567899123456789-100-56789112345678921234567893123456789412345678951234567896123456789712345678981234567899123456789-200-56789112345678921234567893123456789412345678951234</previousAddress>
+            <providerNo>2</providerNo>
+            <province>ON</province>
+            <rosterDate>2016-10-01T00:00:00-07:00</rosterDate>
+            <rosterStatus>1</rosterStatus>
+            <rosterTerminationDate>2016-10-01T00:00:00-07:00</rosterTerminationDate>
+            <rosterTerminationReason>re</rosterTerminationReason>
+            <sex>M</sex>
+            <sexDesc>Male</sexDesc>
+            <sin>467825642</sin>
+            <sourceOfIncome>lottery</sourceOfIncome>
+            <spokenLanguage>spoken language   892123456789312345678941234567895123456789</spokenLanguage>
+            <title>title</title>
+            <ver>1</ver>
+            <yearOfBirth>1964</yearOfBirth>
+         </return>
+      </ns2:getDemographicResponse>
+   </soap:Body>
+</soap:Envelope>

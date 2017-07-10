@@ -1,0 +1,15 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.oscarehr.org/">
+   <soapenv:Header>
+        <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+          <wsse:UsernameToken wsu:Id="UsernameToken-1" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <wsse:Username>130</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Temp3895</wsse:Password>
+      </wsse:UsernameToken>
+    </wsse:Security>
+   </soapenv:Header>   <soapenv:Body>
+      <ws:getDemographic>
+         <!--Optional: -->
+
+      <arg0>83</arg0></ws:getDemographic>
+   </soapenv:Body>
+</soapenv:Envelope>

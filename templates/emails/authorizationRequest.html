@@ -1,0 +1,26 @@
+<html>
+
+<head>
+	<title>{{ user_app_name }} Account Authorization Request</title>
+</head>
+
+<body>
+		A request has been made to authorize an account.<br>
+		<br>
+		Name: {{coordinator.firstName}} {{ coordinator.lastName }}<br>
+		Email: {{coordinator.email}}<br>
+		Organization: <strong>{{coordinator.organization}}</strong><br>
+		City: <strong>{{coordinator.city}}</strong><br/>
+		Phone: <strong>{{coordinator.phone}}</strong><br/>
+  		<br>
+		<a href="{{activationLink}}">Click here</a> to authorize this account. <br/>
+		<br/>
+<br>
+		If the above link does not work, please copy this URL into your browser:<br/>
+		{{activationLink}}<br>
+		<br>
+	</p>
+
+</body>
+
+</html>

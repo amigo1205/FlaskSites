@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/register.js') }}" ></script>
+{% endblock scripts %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div id="content" style="padding-bottom: 50px;">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-offset-3 col-lg-6">
+
+                    <div class="alert alert-success message-field col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8" id="register-success-message" style="display: none; margin-top: 50px;">
+                        <h3 class="col-xs-12 text-center" style="margin-bottom: 15px;">
+                            <strong>A confirmation email has been sent to</strong> <span class="email"></span>&nbsp;<strong>!</strong>
+                        </h3>
+                        <p class="col-xs-12 col-lg-offset-1 col-lg-10 text-justify" style="padding-bottom: 20px;">Please click the secure link in the email to set your password. If you do not see the email, please check your spam folder.</p>
+                    </div>
+
+                    <form role="form" class="clickmd-form" id="register-form">
+                        <div class="row">
+                            <h1 class="page-title register-form-title col-xs-12">Register Form</h1>
+                        </div>
+                        <div class="custom-panel top-25" style="padding-top: 30px;">
+                            <div class="alert alert-info">
+                                <p><strong>Note!</strong> Only Health Care Providers are able to submit consultation requests through <span class="cmd-click">click</span><span class="cmd-md">MD</span>™.</p>
+                                <p>After registering, you will be required to confirm your email address and set a password by clicking a link in a message you will receive in your Inbox.</p>
+                                <p>Once the <span class="cmd-click">click</span><span class="cmd-md">MD</span>™ team has verified your eligibility you will receieve an email message confirming your acceptance.</p>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-sm-6">
+                                    <label class="required" for="first-name">First Name</label>
+                                    <input type="text" name="firstName" value="" class="form-control" id="first-name"
+                                           data-validation="length alphanumeric"
+                                           data-validation-length="1-30"
+                                           data-validation-allowing="-' "
+                                           data-validation-error-msg="First name must be between 1-30 characters long.">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label class="required" for="last-name">Last Name</label>
+                                    <input type="text" name="lastName" value="" class="form-control" id="last-name"
+                                           data-validation="length alphanumeric "
+                                           data-validation-length="1-30"
+                                           data-validation-allowing="-' "
+                                           data-validation-error-msg="Last name must be between 1-30 characters long.">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-sm-6">
+                                    <label class="required" for="organization">Organization</label>
+                                    <input type="text" name="organization" value="" class="form-control" id="organization"
+                                           data-validation="length"
+                                           data-validation-length="1-150"
+                                           data-validation-error-msg="Organization name must be between 1-150 characters long.">
+                                </div>
+
+                                <div class="form-group col-sm-6">
+                                    <label class="required" for="email">Email</label>
+                                    <input type="email" name="email" value="" class="form-control" id="email"
+                                           data-validation="email"
+                                           data-validation-error-msg="Please enter a valid email address.">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-xs-12">
+                                    <label class="required" for="address1">Address 1</label>
+                                    <input type="text" name="address1" value="" class="form-control" id="address1"
+                                           data-validation="length"
+                                           data-validation-length="1-100"
+                                           data-validation-error-msg="Address 1 must be between 1-100 characters long.">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-xs-12">
+                                    <label for="address2">Address 2</label>
+                                    <input type="text" name="address2" value="" class="form-control" id="address2"
+                                           data-validation="length"
+                                           data-validation-optional="true"
+                                           data-validation-length="1-100"
+                                           data-validation-error-msg="Address 2 must be between 1-100 characters long.">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-sm-5 col-md-6">
+                                    <label class="required" for="city">City</label>
+                                    <input type="text" name="city" value="" class="form-control" id="city"
+                                           data-validation="length"
+                                           data-validation-length="1-50"
+                                           data-validation-error-msg="City must be between 1-20 characters long.">
+                                </div>
+                                <div class="form-group col-xs-6 col-sm-4 col-md-3">
+                                    <label class="required" for="postal-code">Postal Code</label>
+                                    <input type="text" name="postal" value="" class="form-control" id="postal-code"
+                                           data-validation="length alphanumeric"
+                                           data-validation-length="6-7"
+                                           data-validation-allowing=" -"
+                                           data-validation-error-msg="Please enter a valid postal code.">
+                                </div>
+                                <div class="form-group col-xs-6 col-sm-3">
+                                    <label class="required" for="province">Province</label>
+                                    <select class="form-control" name="province" id="province" data-validation="required">
+                                        <option selected="selected" disabled>---</option>
+                                        <option value="ON">ON</option>
+                                        <option value="BC">BC</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-sm-6">
+                                    <label class="required" for="phone">Phone Number</label>
+                                    <input type="text" name="phone" value="" class="form-control" id="phone"
+                                           data-validation="custom"
+                                           data-validation-regexp="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$"
+                                           data-validation-help="Valid formats : 1234567890, 123-456-7890, 123.456.7890, 123 456 7890, (123) 456 7890"
+                                           data-validation-error-msg="Please enter a valid phone number.">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="fax">Fax</label>
+                                    <input type="text" name="fax" value="" class="form-control" id="fax" data-validation-optional="true"
+                                           data-validation="custom"
+                                           data-validation-regexp="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$"
+                                           data-validation-help="Valid formats : 1234567890, 123-456-7890, 123.456.7890, 123 456 7890, (123) 456 7890"
+                                           data-validation-error-msg="Please enter a valid fax number.">
+                                </div>
+                            </div>
+                            <div class="alert alert-danger message-field" id="fail-message" style="display:none"></div>
+                            <div class="form-group top-25">
+                                <button type="submit" class="btn btn-primary btn-block">
+                                    <span>Register</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

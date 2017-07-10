@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+   <soap:Body>
+      <ns2:getAppointmentResponse xmlns:ns2="http://ws.oscarehr.org/">
+         <return>
+            <appointmentEndDateTime>2016-10-03T09:45:00-07:00</appointmentEndDateTime>
+            <appointmentStartDateTime>2016-10-03T09:45:00-07:00</appointmentStartDateTime>
+            <bookingSource>MYOSCAR_SELF_BOOKING</bookingSource>
+            <createDateTime>2016-10-14T06:20:12-07:00</createDateTime>
+            <creator>ywang</creator>
+            <demographicNo>0</demographicNo>
+            <id>37</id>
+            <location>location 911234567892123456789</location>
+            <name>name 567891123456789212345678931234567894123456789</name>
+            <notes>notes 6789112345678921234567893123456789412345678951234567896123456789712345678981234567899123456789-100-56789112345678921234567893123456789412345678951234567896123456789712345678981234567899123456789-200-56789112345678921234567893123456789412345678951234</notes>
+            <programId>0</programId>
+            <providerNo>999998</providerNo>
+            <reason>reason 7891123456789212345678931234567894123456789512345678961234567897123456789</reason>
+            <remarks>remarks 891123456789212345678931234567894123456789</remarks>
+            <resources>resources 112345678921234567893123456789412345678951234567896123456789712345678981234567899123456789-100-56789112345678921234567893123456789412345678951234567896123456789712345678981234567899123456789-200-56789112345678921234567893123456789412345678951234</resources>
+            <status>t</status>
+            <style>style 6789</style>
+            <type>type      1123456789212345678931234567894123456789</type>
+            <updateDateTime>2016-10-14T06:20:12-07:00</updateDateTime>
+            <urgency>urgency 8911234567892123456789</urgency>
+         </return>
+      </ns2:getAppointmentResponse>
+   </soap:Body>
+</soap:Envelope>

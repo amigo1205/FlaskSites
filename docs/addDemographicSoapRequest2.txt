@@ -1,0 +1,51 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.oscarehr.org/">
+   <soapenv:Header>
+        <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+          <wsse:UsernameToken wsu:Id="UsernameToken-1" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <wsse:Username>129</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Dgi48a7p</wsse:Password>
+      </wsse:UsernameToken>
+    </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <ws:addDemographic>
+          <arg0>
+             <activeCount>200</activeCount>
+<dateOfBirth>may 5, 1964</dateOfBirth>
+             <firstName>David</firstName>
+             <hin>9781468294</hin>
+             <hsAlertCount>1</hsAlertCount>
+             <lastName>Brooks</lastName>
+             <monthOfBirth>05</monthOfBirth>
+             <sexDesc>Female</sexDesc>
+             <ver>WV</ver>
+             <yearOfBirth>1964</yearOfBirth>
+
+
+            <effDate>2016-10-01</effDate>
+            <email>dbrooks601@rogers.com</email>
+            <endDate>2016-10-01</endDate><familyDoctor>dr</familyDoctor>
+            <hcRenewDate>2016-10-01</hcRenewDate><hcType>a</hcType><headRecord>1</headRecord><hin>9781468292</hin><hsAlertCount>3</hsAlertCount>
+            <officialLanguage>English</officialLanguage>
+            <patientStatus>a</patientStatus><patientStatusDate>2016-10-01</patientStatusDate><pcnIndicator>a</pcnIndicator><phone>2269794800</phone>
+            <phone2>2269794800</phone2><postal>N1G 1H9</postal>
+            <previousAddress>last address</previousAddress><providerNo>2</providerNo><province>ON</province>
+            <rosterDate>2016-10-01</rosterDate><rosterStatus>1</rosterStatus><rosterTerminationDate>2016-10-01</rosterTerminationDate>
+            <rosterTerminationReason>reason</rosterTerminationReason>
+            <sex>M</sex>
+            <sin>467825642</sin>
+            <sourceOfIncome>lottery</sourceOfIncome><spokenLanguage>English</spokenLanguage>
+            <title>Mr</title><ver>1</ver>
+
+
+
+
+          </arg0>
+
+      </ws:addDemographic>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
+
+

@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/patient.js') }}?ver=1.0" ></script>
+    <script src="{{ url_for('static', filename='vendor/jSignature/jSignature.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+    <style type="text/css">
+
+        /*This is the div within which the signature canvas is fitted*/
+        #signature1 {
+            border: 2px dotted black;
+            background-color:lightgrey;
+        }
+
+    </style>
+{% endblock scripts %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <h3><i class="fa fa-hand-o-down" aria-hidden="true"></i>&nbsp;&nbsp;Scroll down to Read and then Sign the Terms and Conditions&nbsp;&nbsp;<i class="fa fa-hand-o-down" aria-hidden="true"></i></h3>
+            <div id="termsAndConditions1">
+                <p>These Terms and Conditions define the obligations of clickMD, its authorized agents and me, the service subscriber, and they establish the basic rules of safe and fair use of clickMD services. clickMD and its authorized agents reserve the right to immediately and without advance notice terminate the service and deny access to individuals who do not abide by the Terms and Conditions.</p>
+                <p>By using the clickMD public Website, the clickMD secure Website and the clickMD telemedicine service, I signify my acceptance of the clickMD services Terms and Conditions and software provider End User Agreement. If I do not accept the clickMD services Terms and Conditions and software provider (OTN) End User Agreement I should not use this service. If clickMD or software provider changes the Terms and Conditions or End User Agreement, they will post those changes prominently. My continued use of the services and Websites following the posting of changes to these terms will mean I accept those changes. Changes to the Terms and Conditions and End User Agreement will become effective immediately upon posting on the clickMD Websites and shall supersede all prior versions of the Terms and Conditions and End User Agreement unless otherwise noted.</p>
+                <p><strong>Privacy and Security</strong><br>
+                    clickMD considers the privacy of my health information to be one of the most important elements in our relationship with me. clickMD’s responsibility to maintain the confidentiality of my health information is one that they take very seriously. I accept clickMD Privacy and Security Policy.</p>
+                <p>I understand that it is extremely important that I keep my password to access clickMD completely confidential. If at any time I feel that the confidentiality of my password has been compromised, I will change it by going to the Password link on the clickMD website. I understand that clickMD or their authorized vendors and agents take no responsibility for and disclaim any and all liability or consequential damages arising from a breach of health record confidentiality resulting from my sharing or losing my password. If clickMD or their authorized vendors and agents discovers that I have inappropriately shared my password with another person, or that I have misused or abused my online access privileges in any way, my participation may be discontinued without prior notice.</p>
+                <p><strong>Use of clickMD for Health Care Services</strong><br>
+                My registration authorizes me to use clickMD services as provided in this agreement. It is my duty to be truthful and accurate with all the information I enter into or upload to the system. I acknowledge that I understand that any misrepresentations about the patient’s condition may result in serious harm to me or others. The law requires that every medical diagnostic or treatment encounter be documented. The documentation of consultation encounters with clickMD is maintained in an electronic health record (EHR). I may also use my EHR to store other important medical information pertaining to my current health, medical condition and my health history.</p>
+                <p>By accepting this Agreement, I am granted a non-transferable license subject to the terms of this Agreement to use clickMD services. In order to be valid, my account must contain certain required true, correct and verifiable information about my identity and medical history. In order to maintain access to clickMD services, and in order for clickMD to provide me important information regarding my medical treatment and my health, it is my responsibility to update my personal account information and to notify clickMD of any changes in my home address, e-mail address, telephone number, or guardian or emergency contact. My failure to do so may result in interruption of service or clickMD’s inability to deliver to me important time-sensitive information about my medical condition, medications, laboratory and diagnostic test results. I may update my personal information by accessing my registration information through the clickMD Website by logging in with my user name and password.</p>
+                <p>clickMD’s telemedicine consults are provided by clinicians dedicated to the safe and effective, evidence-based practice of telemedicine. I choose to enter into a clinician-patient relationship with clickMD’s clinicians. I agree to have my medical history and other diagnostic and medical documentation reviewed by one of clickMD’s clinicians. I acknowledge that clickMD’s clinicians may choose not to treat my condition or prescribe a medication for my condition. clickMD’s clinicians do not prescribe narcotics/controlled substances, non-therapeutic drugs and certain other drugs which may be harmful because of their potential for abuse. clickMD’s clinicians reserve the right to deny care for potential misuse of services. clickMD operates subject to state regulation and may not be available in certain states.</p>
+                <p>For individuals who are under age 18, a parent or legal guardian must accept this Agreement and on his or her behalf. I agree at all times not to falsify or misrepresent my identity or my authority to act on behalf of another person. I also agree to not attempt or facilitate to attack or undermine the security of the integrity of the systems or networks of clickMD, the software provider or any of its authorized agents or affiliates.</p>
+                <p>I understand that clickMD should never be used for urgent matters. Therefore, for all urgent matters that I believe may immediately affect my health or well-being, I will, without delay, go to the emergency department of a local hospital, and/or dial 911.</p>
+                <p>clickMD makes the consultation report available for you to review to ensure that relevant signs and symptoms of patient’s presenting complaint are accurately documented and that you understand the treatment decision and instructions issued by the clickMD health care provider. I am advised to immediately contact clickMD if I disagree with or do not understand the contents of the consultation report or the instructions issued by the treating clickMD health care provider.</p>
+                <p>I understand that clickMD clinicians or staff may send me messages. These messages may contain information that is important to my health and medical care. It is my responsibility to monitor these messages. By entering my valid and functional e-mail address and mobile phone number, I have enabled clickMD to notify me of messages sent to my clickMD Inbox. I will update my e-mail address on clickMD as needed. I agree not to hold clickMD or its authorized vendors and agents liable for any loss, injury or claims of any kind resulting from clickMD messages that I fail to read in a timely manner. I understand that contents of any message may be stored in my permanent health record. I agree that all communication will be in regard to my own health condition(s). I understand that asking for advice on behalf of another person could potentially be harmful and is a violation of the clickMD Terms and Conditions. clickMD and its clinicians do not assume any responsibility for health information or services used by persons other than the primary account holder.</p>
+                <p><strong>Deactivation of Account</strong><br>
+                I understand that my account may be deactivated upon my request or at the discretion of clickMD for failure to meet these Terms and Conditions.</p>
+                <p><strong>Disclaimer</strong><br>
+                I understand that my account may not be available to me at all times due to unanticipated system failures, back-up procedures, maintenance, or other causes beyond the control of the clickMD or its authorized vendors and agents. Access is provided on an “as-is as-available” basis and clickMD or its authorized vendors and agents do not guarantee that I will be able to access my account at all times.</p>
+                <p>I understand that clickMD or its authorized vendors and agents take no responsibility for and disclaim any and all liability arising from any inaccuracies or defects in software, communication lines, the virtual private network, the Internet or my Internet Service Provider (ISP), access system, computer hardware or software, or any other service or device that I use to access my account.</p>
+                <p>I understand that the health care services rendered by clickMD’s clinicians are subject to their discretion and professional judgment. I understand that clickMD operates subject to OHIP regulation.</p>
+                <p><strong>Surveys</strong><br>
+                I understand that from time to time I may be asked to complete patient satisfaction surveys. clickMD or its software provider, vendors and agents may analyze information submitted via these surveys as part of descriptive (demographic) studies and reports. In such cases all of my personal identifying information will be removed.</p>
+                <p>If any provision or provisions of this Agreement shall be held to be invalid, illegal or unenforceable, the validity, legality and enforceability of the remaining provisions shall not be affected thereby.</p>
+                <p>It is understood that no delay or omission in exercising any right or remedy identified herein shall constitute a waiver of such right or remedy, and shall not be construed as a bar to or a waiver of any such right or remedy on any other occasion.</p>
+                <p>clickMD and its authorized agents and I agree to comply with all applicable laws and regulations of governmental bodies or agencies in performance of our respective obligations under this Agreement.</p>
+            </div>
+            <br>
+        <div id="content">
+            <div id="signature-parent" style="width:600px;height:150px">
+                <div id="signature1" ></div>
+            </div>
+
+            <input type="button" id="reset" value="Reset">
+            <input type="button" id="submit" value="Submit">
+        </div>
+
+
+        </div>
+    </div>
+
+{% endblock %}

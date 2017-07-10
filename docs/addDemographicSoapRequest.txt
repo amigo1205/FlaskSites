@@ -1,0 +1,118 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.oscarehr.org/">
+   <soapenv:Header>
+        <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+          <wsse:UsernameToken wsu:Id="UsernameToken-1" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+        <wsse:Username>129</wsse:Username>
+        <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">Dgi48a7p</wsse:Password>
+      </wsse:UsernameToken>
+    </wsse:Security>
+   </soapenv:Header>
+
+   <soapenv:Body>
+      <ws:addDemographic>
+         <!--Optional:-->
+         <arg0>
+            <activeCount>200</activeCount>
+            <!--Optional:-->
+
+            <!--Optional:-->
+            <address>a</address>
+            <!--Optional:-->
+            <alias>a</alias>
+            <!--Optional:-->
+            <anonymous>a</anonymous>
+            <!--Optional:-->
+            <cellPhone>1231231234</cellPhone>
+            <!--Optional:-->
+            <chartNo>a</chartNo>
+            <!--Optional:-->
+            <children>3</children>
+            <!--Optional:-->
+            <citizenship>c</citizenship>
+            <!--Optional:-->
+            <city>c</city>
+            <!--Optional:-->
+
+            <!--Optional:-->
+            <dateJoined>2016-10-01</dateJoined><dateOfBirth>may 5, 1964</dateOfBirth>
+            <!--Optional:-->
+            <displayName>david</displayName>
+            <!--Optional:-->
+
+            <!--Optional:-->
+            <effDate>2016-10-01</effDate><email>dbrooks601@rogers.com</email>
+            <!--Optional:-->
+
+            <!--Optional:-->
+            <endDate>2016-10-01</endDate><familyDoctor>dr</familyDoctor>
+            <!--Optional:-->
+            <firstName>David</firstName>
+            <!--Optional:-->
+
+            <!--Optional:-->
+
+            <!--Optional:-->
+
+            <hcRenewDate>2016-10-01</hcRenewDate><hcType>a</hcType><headRecord>1</headRecord><hin>9781468292</hin><hsAlertCount>3</hsAlertCount>
+            <!--Optional:-->
+
+            <!--Optional:-->
+            <lastName>Brooks</lastName>
+            <!--Optional:-->
+
+            <!--Optional:-->
+
+            <!--Optional:-->
+
+            <!--Optional:-->
+            <lastUpdateDate>2016-10-01</lastUpdateDate><lastUpdateUser>a</lastUpdateUser><links>a</links><monthOfBirth>May</monthOfBirth>
+            <!--Optional:-->
+            <myOscarUserName></myOscarUserName>
+            <!--Optional:-->
+            <officialLanguage>English</officialLanguage>
+            <!--Optional:-->
+
+            <!--Optional:-->
+
+            <!--Optional:-->
+
+            <!--Optional:-->
+            <patientStatus>a</patientStatus><patientStatusDate>2016-10-01</patientStatusDate><pcnIndicator>a</pcnIndicator><phone>2269794800</phone>
+            <!--Optional:-->
+
+            <!--Optional:-->
+            <phone2>2269794800</phone2><postal>N1G 1H9</postal>
+            <!--Optional:-->
+
+            <!--Optional:-->
+
+            <!--Optional:-->
+            <previousAddress>last address</previousAddress><providerNo>2</providerNo><province>ON</province>
+            <!--Optional:-->
+
+            <!--Optional:-->
+
+            <!--Optional:-->
+
+            <!--Optional:-->
+
+            <!--Optional:-->
+            <rosterDate>2016-10-01</rosterDate><rosterStatus>1</rosterStatus><rosterTerminationDate>2016-10-01</rosterTerminationDate><rosterTerminationReason>reason</rosterTerminationReason><sex>M</sex>
+            <!--Optional:-->
+
+            <!--Optional:-->
+            <sexDesc>m</sexDesc><sin>467825642</sin>
+            <!--Optional:-->
+
+            <!--Optional:-->
+            <sourceOfIncome>lottery</sourceOfIncome><spokenLanguage>English</spokenLanguage>
+            <!--Optional:-->
+            <title>Mr</title><ver>1</ver><yearOfBirth>1964</yearOfBirth>
+            <!--Optional:-->
+
+         </arg0>
+      </ws:addDemographic>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+

@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block title %}CLICKMD - Login{% endblock %}
+{% block scripts %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/login.js') }}" ></script>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid">
+        <div id="content">
+            <div class="row">
+
+                <div class="alert alert-success message-field col-lg-4 col-md-6 col-sm-8 col-lg-offset-4 col-md-offset-3 col-sm-offset-2" id="reset-password-email-success-message" style="display: none; margin-top: 50px;">
+                    <h3 class="col-xs-12 text-center" style="margin-bottom: 15px;">
+                        <strong>A Reset Password email has been sent to</strong> <span class="email"></span>&nbsp;<strong>.</strong>
+                    </h3>
+                    <p class="col-xs-12 col-lg-offset-1 col-lg-10 text-justify" style="padding-bottom: 20px;">Please click the secure link in the email to reset your password. If you do not see the email, please check your spam folder.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-8 col-lg-offset-4 col-md-offset-3 col-sm-offset-2 ">
+
+
+
+
+                    <form role="form" class="clickmd-form" id="login-form">
+                        <h2 class="page-title">Login</h2>
+                        <div id="login-error" class="alert alert-danger" style="display: none;"></div>
+                        <div class="custom-panel top-25" style="padding-top: 40px; padding-bottom: 50px;">
+                            <div class="form-group">
+                                <label for="login-email">Email Address</label>
+                                <input type="email" class="form-control" id="login-email" name="email" data-validation="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <label for="login-password">Password</label>
+                                <input type="password" class="form-control" id="login-password" name="password" placeholder="Password"
+                                       data-validation="length"
+                                       data-validation-length="min8">
+                            </div>
+
+                            <div class="form-group top-25">
+                                <button type="submit" class="btn btn-primary btn-block" id="login-button">
+                                    <span>Login </span>
+                                </button>
+                            </div>
+                            <div class="top-25">
+                                <div class="form-group pull-left">
+                                    <a role="button" id="reset-password">
+                                        <span><i class="fa fa-key" aria-hidden="true"></i>&nbsp;&nbsp;Reset Password</span>
+                                    </a>
+                                </div>
+                                <div class="form-group pull-right">
+                                    <a id="register-on-login-page" href="register">
+                                        <span><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;&nbsp;Register</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+
+                    <form role="form" class="clickmd-form" id="login-reset-form" style="display: none;">
+                        <h2 class="page-title">Forgot Password/Reset Password</h2>
+                        <div class="alert alert-danger message-field" id="reset-error" style="display:none"></div>
+                        <div class="custom-panel top-25" style="padding-top: 25px; padding-bottom: 25px;">
+                            <div class="form-group">
+                                <a role="button" id="login">
+                                    <i class="fa fa-caret-left"></i> <span>Back to Login</span>
+                                </a>
+                            </div>
+                            <div class="form-group">
+                                <label for="login-reset-email" class="required">Email Address</label>
+                                <input type="email" class="form-control" id="login-reset-email" name="email" data-validation="email" placeholder="Email" autofocus required>
+                            </div>
+
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block top-25">
+                                    <span>Reset Password</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>ClickMD</title>
+
+        <link rel="shortcut icon" href="{{ url_for('static', filename='./images/favicon.png') }}" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/bootstrap/dist/css/bootstrap.min.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/bootstrap/dist/css/bootstrap-theme.min.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/font-awesome/css/font-awesome.min.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css') }}"/>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/clickmd.css') }}?ver=1.0">
+		{% block stylesheets %}{% endblock %}
+	</head>
+	<body>
+		<header class="header">
+            <div class="banner">
+				<div class="container">
+					<div class="row">
+						<div class="site-branding col-xs-12 col-sm-9 col-md-10">
+							<div id="logo">
+								<a href="/">
+									<img src="{{ url_for('static', filename='images/logo.png') }}">
+								</a>
+							</div>
+						</div>
+						<div class="col-xs-offset-1 col-xs-11 col-sm-offset-0 col-sm-3 col-md-2">
+							<div id="social" class="social">
+                                <a href="https://www.facebook.com/clickmdontario"><i class="fa fa-facebook-square fa-2x facebook"></i></a>
+                                <a href="https://twitter.com/clickmdontario"><i class="fa fa-twitter fa-2x twitter"></i></a>
+                                <a href="https://www.youtube.com/channel/UC0-V2JpTekNCa5ZMUSlIqCw"><i class="fa fa-youtube fa-2x youtube"></i></a>
+                                <a href="http://www.instagram.com/clickmdontario"><i class="fa fa-instagram fa-2x instagram"></i></a>
+							</div>
+						</div>
+					</div>
+    			</div>
+            </div>
+
+			<div class="navbar navbar-default" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button id="collapse-toggle-button" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="navbar-collapse collapse">
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <div class="col-lg-4 col-lg-offset-2">
+                                <ul class="nav navbar-nav navbar-left">
+                                    <li class=""><a id="home-button" href="/"> <i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <ul class="nav navbar-nav navbar-right" id="user-logged-in-menu" style="display: none">
+                                    <li class="menu-item user dropdown" id="user-menu-item">
+                                        <a href="#" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User <span class="caret"></span></a>
+                                        <ul class="dropdown-menu dropdown-menu-1" aria-labelledby="dropdownMenu1">
+                                            <li class="dropdown-menu-item" id="dashboard-menu-item" style="display:none"><a href="/newAppointment">Appointments</a></li>
+                                            <li class="dropdown-menu-item" id="doctors-on-call-menu-item" style="display:none"><a href="/oncallDoctors">Manage Doctors</a></li>
+                                            <li class="dropdown-menu-item" id="manage-coordinators-menu-item" style="display:none"><a href="/manageCoordinators">Manage Providers</a></li>
+                                            <li class="dropdown-menu-item" id="authorization-menu-item" style="display:none"><a href="/authorization">Provider Authorization</a></li>
+
+                                            <li class="dropdown-menu-item" id="logout-menu-item"><a href="" >Logout</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="nav navbar-nav navbar-right" id="user-not-logged-in-menu" style="display: none">
+                                    <li class="menu-item login" id="login-menu-item"><a href="/login">Login <i class="fa fa-sign-in"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+					</div><!--/.nav-collapse -->
+				</div><!--/.container-fluid -->
+			</div>
+		</header>
+
+		<main >
+			<div id="browser-warning" class="container-fluid top-25" style="display: none;">
+				 <div class="row">
+					<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+						<div class="clickmd-form">
+			                <div class="alert alert-info" role="alert">
+                                <p class="bottom-10" style="font-size: 1.2em;"><strong>Your browser may not be fully compatible with ClickMD</strong>.</p>
+				                <p>
+				                    <div class="bottom-15">Officially supported browsers:</div>
+				                    <ul class="row bottom-15 cm-browser-list">
+				                        <li class="col-lg-offset-2 col-lg-2 col-xs-3">
+					                        <div class="cm-browser-logo cm-browser-logo-chrome bottom-10"></div>
+					                        Chrome 45+
+				                        </li>
+				                        <li class="col-lg-2 col-xs-3">
+					                        <div class="cm-browser-logo cm-browser-logo-firefox bottom-10"></div>
+					                        Firefox 38+
+				                        </li>
+				                        <li class="col-lg-2 col-xs-3">
+					                        <div class="cm-browser-logo cm-browser-logo-safari bottom-10"></div>
+					                        Safari 9+
+				                        </li>
+				                        <li class="col-lg-2 col-xs-3">
+					                        <div class="cm-browser-logo cm-browser-logo-explorer bottom-10"></div>
+					                        IE 11
+				                        </li>
+				                    </ul>
+				                    <p class="text-right">
+				                        <a class="alert-link pointer" data-toggle="collapse" data-target="#more-info" style="text-decoration: underline;">
+				                            Mininum Requirements :
+				                        </a>
+				                    </p>
+
+				                    <div id="more-info" class="alert alert-info inner-alert top-10 collapse">
+				                        <div class="bottom-15">Although we do not support these browsers, core functionality should work:</div>
+				                        <ul class="row bottom-10 cm-browser-list">
+				                            <li class="col-lg-offset-1 col-lg-3 col-xs-4">
+					                            <div class="cm-browser-logo cm-browser-logo-chrome bottom-10"></div>
+					                            Chrome 20+
+				                            </li>
+                                            <li class="col-lg-4 col-xs-4">
+	                                            <div class="cm-browser-logo cm-browser-logo-firefox bottom-10"></div>
+	                                            Firefox 20+
+                                            </li>
+				                            <li class="col-lg-3 col-xs-4">
+					                            <div class="cm-browser-logo cm-browser-logo-safari bottom-10"></div>
+					                            Safari 6.1+
+				                            </li>
+				                            <li class="col-lg-offset-1 col-lg-3 col-xs-4">
+					                            <div class="cm-browser-logo cm-browser-logo-explorer bottom-10"></div>
+					                            IE 10+
+				                            </li>
+				                            <li class="col-lg-4 col-xs-4">
+					                            <div class="cm-browser-logo cm-browser-logo-edge bottom-10"></div>
+					                            Edge 12+
+				                            </li>
+				                            <li class="col-lg-3 col-xs-4">
+					                            <div class="cm-browser-logo cm-browser-logo-opera bottom-10"></div>
+					                            Opera 15+
+				                            </li>
+				                        </ul>
+				                    </div>
+				                </p>
+                            </div>
+						</div>
+					</div>
+				 </div>
+			</div>
+            {% block content %}
+            {% endblock %}
+		</main>
+		<footer>
+            <div class="alert alert-danger alert-dismissable float-alert" role="alert" id="floating-alert" style="display: none;">
+                <button style="right: 0;" type="button" class="close" data-dismiss="alert" aria-label="Close">&times;</button>
+                <i class="fa fa-info-circle" style="margin-right: 0.3em;"></i>
+                <span id="floating-alert-text" class="float-alert-wrap"></span>
+            </div>
+			{% block footer %}
+			<div id="footer-copyright" class="container-fluid top-25">
+				<div class="row">
+					<hr>
+					<div class="col-lg-12">
+						<div class="col-md-12">
+							<p class="muted text-center">© 2016, 2017 ClickMD. All rights reserved</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endblock %}
+		</footer>
+        <script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery/dist/jquery.min.js') }}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='vendor/underscore/underscore-min.js') }}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='vendor/backbone/backbone.js') }}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='vendor/moment/min/moment.min.js') }}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='vendor/jquery-form-validator/form-validator/jquery.form-validator.min.js') }}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/clickmd.js') }}?ver=1.0"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='vendor/spin.js/spin.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/base.js') }}?ver=1.0"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='vendor/jSignature/jSignature.min.js') }}"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='vendor/modernizr/modernizr-custom.js') }}"></script>
+
+        <!--<script type="text/javascript" src="{{ url_for('static', filename='vendor/jspdf/jspdf.js') }}"></script>-->
+
+        <script type="text/javascript" src="{{ url_for('static', filename='vendor/jspdf/jspdf.debug.js') }}"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>-->
+
+		{% block scripts %}{% endblock scripts %}
+	</body>
+</html>

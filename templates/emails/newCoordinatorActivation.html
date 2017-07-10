@@ -1,0 +1,37 @@
+<html>
+
+<head>
+	<title>Welcome to {{ user_app_name }}</title>
+</head>
+
+<body>
+	<p> Dear {{coordinator["firstName"]}} {{coordinator["lastName"]}},</p>
+	<p>
+		Welcome to {{ user_app_name }}!<br>
+		Your account has been created. The next step is to verify your email address and enter a password.<br>
+		<br>
+		Name: {{coordinator["lastName"]}}, {{coordinator["firstName"]}}<br>
+		Email: {{coordinator["email"]}}<br>
+		Organization: <strong>{{coordinator["organization"]}}</strong><br>
+		Address Line 1: <strong>{{coordinator["address1"]}}</strong><br/>
+		Address Line 2: <strong>{{coordinator["address2"]}}</strong><br/>
+		City: <strong>{{coordinator["city"]}}</strong><br/>
+		Province: <strong>{{coordinator["province"]}}</strong><br/>
+		Postal Code: <strong>{{coordinator["postal"]}}</strong><br/>
+		Phone: <strong>{{coordinator["phone"]}}</strong><br/>
+		Fax: <strong>{{coordinator["fax"]}}</strong><br/>
+  		<br>
+		To activate your account please <a href="{{activationLink}}">click here</a>. <br/>
+		<br/>
+		You will be asked to set a new password when you log in for the first time.<br/>
+<br>
+		If the above link does not work, please copy this URL into your browser:<br/>
+		{{activationLink}}<br>
+		<br>
+		Thank you,<br>
+		Your {{ user_app_name }} Team
+	</p>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<html>
+
+<head>
+	<title>Welcome to {{ user_app_name }}</title>
+</head>
+
+<body>
+	<p> Dear {{coordinator["firstName"]}} {{coordinator["lastName"]}},</p>
+	<p>
+		Welcome to {{ user_app_name }}!<br>
+		Your account has been authorized. <br>
+        You may now begin making doctor consulation requests on behalf of your clients.<br>
+		<br>
+		To login please <a href="{{activationLink}}">click here</a>. <br/>
+		<br/>
+<br>
+		If the above link does not work, please copy this URL into your browser:<br/>
+		{{activationLink}}<br>
+		<br>
+		Thank you,<br>
+		Your {{ user_app_name }} Team
+	</p>
+
+</body>
+
+</html>

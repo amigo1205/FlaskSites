@@ -1,0 +1,11 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.oscarehr.org/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:login>
+         <!--Optional:-->
+
+         <!--Optional:-->
+         <arg0>ywang</arg0><arg1>Dgi48a7p</arg1>
+      </ws:login>
+   </soapenv:Body>
+</soapenv:Envelope>
